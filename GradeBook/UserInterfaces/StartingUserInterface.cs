@@ -40,13 +40,14 @@ namespace GradeBook.UserInterfaces
                 return;
             }
             var name = parts[1];
+            BaseGradeBook gradeBook = new BaseGradeBook(name);
             if(parts[2] == "standard")
             {
-                StandardGradeBook gradeBook = new StandardGradeBook(name);
+                gradeBook = new StandardGradeBook(name);
             }
             else if (parts[2] == "ranked")
             {
-                RankedGradeBook gradeBook = new RankedGradeBook(name);
+                gradeBook = new RankedGradeBook(name);
             }
             else
             {
